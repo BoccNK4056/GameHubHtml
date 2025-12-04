@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Кликер — HTML Games Hub</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 30px; }
+    #score { font-size: 24px; margin: 20px; }
+    #upgrade { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>🖱️ Кликер</h1>
+  <div id="score">Очки: 0</div>
+  <button id="click-btn">Клик!</button>
+  <div id="upgrade">
+    <p>Улучшение: +1 очко за клик (пока недоступно)</p>
+  </div>
+  <br>
+  <a href="../index.html">← Назад в хаб</a>
+
+  <script>
+    let score = 0;
+    const clickBtn = document.getElementById('click-btn');
+    const scoreDisplay = document.getElementById('score');
+
+    clickBtn.addEventListener('click', () => {
+      score++;
+      scoreDisplay.textContent = `Очки: ${score}`;
+    });
+  </script>
+</body>
+</html>
