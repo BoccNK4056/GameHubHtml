@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Монетка — HTML Games Hub</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 30px; }
+    #result { font-size: 24px; margin: 20px; }
+  </style>
+</head>
+<body>
+  <h1>🪙 Подбросить монетку</h1>
+  <button id="flip-btn">Подбросить!</button>
+  <div id="result"></div>
+  <br>
+  <a href="../index.html">← Назад в хаб</a>
+
+  <script>
+    document.getElementById('flip-btn').addEventListener('click', () => {
+      const result = Math.random() > 0.5 ? 'Орёл 🦅' : 'Решка 🪙';
+      document.getElementById('result').textContent = result;
+      
+      // Пример: за угадывание — можно добавить HTMLoins
+      // (пока просто демонстрация)
+    });
+  </script>
+</body>
+</html>
